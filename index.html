@@ -6,6 +6,7 @@
     <title>bank app?</title>
     <style>
       body {
+        text-align: center;
       }
       .text1 {
         color: red;
@@ -29,9 +30,31 @@
       .p2 {
         font-family: Arial, Helvetica, sans-serif;
       }
+      .Credit{
+        float:left;
+        margin-left: 20pc;
+        background-color: gray;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+        border-radius: 12%;
+      }
+            .debit{
+        float:right;
+        margin-right: 20pc;
+        background-color: gray;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+        border-radius: 12%;
+      }
     </style>
   </head>
   <body>
+    <h1>Bank App</h1>
+       <form name="bank">
+         <label>Enter Transaction Amount <input id="amount" name="amount" type="number" required></label> <br><br>
+        <input type="submit" name="Credit" class="Credit" value="Credit">
+        <input type="submit" name="Debit" class="debit" value="Debit">
+       </form>
     <script>
       var account_balance = parse(current_balance_el.innerText)+ parseInt(enterd_amount_el);
       current_balance_el.innerText = parseInt(account_balance)
